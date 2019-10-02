@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MuleSoft Here Sample</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Autocomplete (get suggestions)</h5>
+            <h6 class="card-subtitle mb-2 text-muted">HERE Geocoder API - Autocomplete</h6>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="autocompleteQuery" placeholder="Enter address query">
+                </div>
+            </form>
+            <ul class="autocompleteResults">
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Forward (get coordinates from location)</h5>
+            <h6 class="card-subtitle mb-2 text-muted">HERE Geocoder API - Forward</h6>
+        </div>
+        <div class="card-body">
+			<div class="form-group">
+				<input type="text" class="form-control" id="forwardQuery" placeholder="Enter address query">
+			</div>
+			<button id="btnForward" class="btn btn-primary">Submit</button>
+            <ul class="forwardResults">
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Reverse (get location from coordinates)</h5>
+            <h6 class="card-subtitle mb-2 text-muted">HERE Geocoder API - Reverse</h6>
+        </div>
+        <div class="card-body">
+			<div class="form-group">
+				<input type="text" class="form-control" id="reverseLatitude"  placeholder="Enter latitude">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="reverseLongitude"  placeholder="Enter longitude">
+			</div>
+			<button id="btnReverse" class="btn btn-primary">Submit</button>
+            <ul class="reverseResults">
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>   
+<script type="text/javascript" src="index.js"></script>
+</html>

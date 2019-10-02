@@ -1,0 +1,14 @@
+body {
+	background-color: #abc;
+}
+
+h1, h2 {
+  font-family: Lato;
+}
+
+.card {
+  position: relative;
+  left: 50%;
+  margin: 32px 0 32px -200px;
+  width: 400px;
+}
