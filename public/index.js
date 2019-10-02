@@ -1,6 +1,6 @@
-const AUTOCOMPLETION_URL = 'http://localhost:3000/autocomplete';
-const FORWARD_URL = 'http://localhost:3000/forward';
-const REVERSE_URL = 'http://localhost:3000/reverse';
+const AUTOCOMPLETION_URL = '/autocomplete';
+const FORWARD_URL = '/forward';
+const REVERSE_URL = '/reverse';
 const TIMEOUT = 500;
 
 $(document).ready(function() { 
@@ -25,8 +25,16 @@ $(document).ready(function() {
 				$('.autocompleteResults').empty();
 				
 				$.each(data, function (index, suggestion) {
+					let suggestionLink = $('<a>');
+					$(suggestionLink).html(suggestion);
+					$(suggestionLink).attr('href', 'javascript:void(0)');
+					$(suggestionLink).click(function() {
+						$("#autocompleteQuery").val(suggestion);
+						$('.autocompleteResults').empty();
+					});
+					
 					$('.autocompleteResults')
-						.append($('<li>').html(suggestion));
+						.append($('<li>').append(suggestionLink));
 				});		
 			},
 			error:function(a, b,c) {
