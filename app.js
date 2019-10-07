@@ -4,9 +4,9 @@ var express = require('express')
   
 var http = require('http');
 
-const AUTOCOMPLETION_URL = 'http://heregeo-aqwr.us-e2.cloudhub.io/autocomplete';
-const FORWARD_URL = 'http://heregeo-aqwr.us-e2.cloudhub.io/geocode';
-const REVERSE_URL = 'http://heregeo-aqwr.us-e2.cloudhub.io/reverse';
+const AUTOCOMPLETION_URL = 'http://heregeo-brkp.us-e2.cloudhub.io/autocomplete';
+const FORWARD_URL = 'http://heregeo-brkp.us-e2.cloudhub.io/geocode';
+const REVERSE_URL = 'http://heregeo-brkp.us-e2.cloudhub.io/reverse';
 
 app.use(express.static('public'));
 
